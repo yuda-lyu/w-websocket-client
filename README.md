@@ -90,13 +90,13 @@ let opt = {
 let WSC = window['w-websocket-client']
 new WSC(opt)
     .then(function(w) {
-        //console.log('client nodejs: then', w)
+        //console.log('client web: then', w)
 
         //send
         w.send('abc')
 
     })
     .catch(function(err) {
-        console.log('client nodejs: catch', err)
+        console.log('client web: catch', err)
     })
 ```
