@@ -13,7 +13,7 @@ import isfun from 'wsemi/src/isfun.mjs'
  * @param {Function} opt.close 輸入監聽close函數
  * @param {Function} opt.message 輸入監聽message函數
  * @param {Function} opt.error 輸入監聽error函數
- * @returns {Promise} 回傳Promise，resolve為映射伺服器端可用函數之物件，各函數輸入皆為單一物件，各函數回傳皆為Promise，用resolve與reject處理回傳結果
+ * @returns {Promise} 回傳Promise，resolve為回傳連接成功的Websocket物件，reject回傳為無法連接
  * @example
  *
  * import WSC from 'w-websocket-client/dist/w-websocket-client.umd.js'
