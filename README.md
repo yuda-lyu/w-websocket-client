@@ -28,6 +28,10 @@ let opt = {
     token: '*',
     open: function() {
         console.log('client nodejs: open')
+
+        //send
+        wsc.send('abc')
+
     },
     close: function() {
         console.log('client nodejs: close')
@@ -41,17 +45,7 @@ let opt = {
 }
 
 //WSC
-new WSC(opt)
-    .then(function(w) {
-        //console.log('client nodejs: then', w)
-
-        //send
-        w.send('abc')
-
-    })
-    .catch(function(err) {
-        console.log('client nodejs: catch', err)
-    })
+let wsc = new WSC(opt)
 ```
 
 ### In a browser(UMD module):
@@ -63,7 +57,7 @@ new WSC(opt)
 ```
 [Necessary] Add script for w-websocket-client.
 ```alias
-<script src="https://cdn.jsdelivr.net/npm/w-websocket-client@1.0.0/dist/w-websocket-client.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/w-websocket-client@1.0.1/dist/w-websocket-client.umd.js"></script>
 ```
 #### Example for `w-websocket-client`:
 > **Link:** [[dev source code](https://github.com/yuda-lyu/w-websocket-client/blob/master/web.html)]
@@ -74,6 +68,10 @@ let opt = {
     token: '*',
     open: function() {
         console.log('client web: open')
+
+        //send
+        wsc.send('abc')
+
     },
     close: function() {
         console.log('client web: close')
@@ -88,15 +86,5 @@ let opt = {
 
 //WSC
 let WSC = window['w-websocket-client']
-new WSC(opt)
-    .then(function(w) {
-        //console.log('client web: then', w)
-
-        //send
-        w.send('abc')
-
-    })
-    .catch(function(err) {
-        console.log('client web: catch', err)
-    })
+let wsc = new WSC(opt)
 ```

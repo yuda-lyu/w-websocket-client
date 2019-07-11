@@ -6,6 +6,23 @@ let opt = {
     token: '*',
     open: function() {
         console.log('client nodejs[port:8080]: open')
+
+        //send
+        wsc.send('abc')
+
+        //msg
+        // let msg = {
+        //     token: opt.token,
+        //     _id: 'abc',
+        //     func: 'getFuncs',
+        //     input: null,
+        // }
+        // wsc.send(JSON.stringify(msg), function(err) {
+        //     if (err) {
+        //         console.log('client nodejs[port:8080]: send:  err', err)
+        //     }
+        // })
+
     },
     close: function() {
         console.log('client nodejs[port:8080]: close')
@@ -18,27 +35,4 @@ let opt = {
     },
 }
 
-new WSC(opt)
-    .then(function(w) {
-        //console.log('client nodejs[port:8080]: then', w)
-
-        //send
-        w.send('abc')
-
-        //msg
-        // let msg = {
-        //     token: opt.token,
-        //     _id: 'abc',
-        //     func: 'getFuncs',
-        //     input: null,
-        // }
-        // w.send(JSON.stringify(msg), function(err) {
-        //     if (err) {
-        //         console.log('client nodejs[port:8080]: send:  err', err)
-        //     }
-        // })
-
-    })
-    .catch(function(err) {
-        console.log('client nodejs[port:8080]: catch', err)
-    })
+let wsc = new WSC(opt)

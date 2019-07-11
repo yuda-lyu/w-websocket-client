@@ -19,12 +19,16 @@
                 token: '*',
                 open: function() {
                     wsemi.bodyLog('client web: open')
+
+                    //send
+                    wsc.send('abc')
+                  
                 },
                 close: function() {
                     wsemi.bodyLog('client web: close')
                 },
                 message: function(data) {
-                    console.log('client web: message', data)
+                    wsemi.bodyLog('client web: message', data)
                 },
                 error: function(err) {
                     wsemi.bodyLog('client web: error:', err)
@@ -33,17 +37,7 @@
 
             //WSC
             let WSC = window['w-websocket-client']
-            new WSC(opt)
-                .then(function(w) {
-                    wsemi.bodyLog('client web: then', w)
-
-                    //send
-                    w.send('abc')
-
-                })
-                .catch(function(err) {
-                    console.log('client web: catch', err)
-                })
+            let wsc = new WSC(opt)
     
         </script>
 

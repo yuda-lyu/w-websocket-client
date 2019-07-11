@@ -1,5 +1,4 @@
 import WS from 'ws'
-import genPm from 'wsemi/src/genPm.mjs'
 import isfun from 'wsemi/src/isfun.mjs'
 
 
@@ -53,7 +52,6 @@ import isfun from 'wsemi/src/isfun.mjs'
  *
  */
 function WWebsocketClient(opt) {
-    let pm = genPm()
     let wsc = null //WebSocket
 
 
@@ -86,8 +84,7 @@ function WWebsocketClient(opt) {
         wsc = new MixWS(opt.url)
     }
     catch (err) {
-        pm.reject('can not create websocket')
-        return pm
+        return null
     }
 
 
@@ -114,10 +111,6 @@ function WWebsocketClient(opt) {
         if (isfun(opt.open)) {
             opt.open()
         }
-
-        //resolve
-        pm.resolve(wsc)
-
     }
 
 
@@ -146,7 +139,7 @@ function WWebsocketClient(opt) {
     }
 
 
-    return pm
+    return wsc
 }
 
 
