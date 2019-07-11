@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-tw">
+
+    <head>
+        <meta http-equiv="content-type" content="text/html charset=UTF-8" />
+        <title>WebSocket</title>
+
+        <script nomodule src="https://cdn.jsdelivr.net/npm/@babel/polyfill/dist/polyfill.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/wsemi/dist/wsemi.umd.js"></script>
+        
+        <script src="dist/w-websocket-client.umd.js"></script>
+
+        <script>
+
+            //opt
+            let opt = {
+                url: 'ws://localhost:8080',
+                token: '*',
+                open: function() {
+                    wsemi.bodyLog('client web: open')
+                },
+                close: function() {
+                    wsemi.bodyLog('client web: close')
+                },
+                message: function(data) {
+                    console.log('client web: message', data)
+                },
+                error: function(err) {
+                    wsemi.bodyLog('client web: error:', err)
+                },
+            }
+
+            //WSC
+            let WSC = window['w-websocket-client']
+            new WSC(opt)
+                .then(function(w) {
+                    wsemi.bodyLog('client web: then', w)
+
+                    //send
+                    w.send('abc')
+
+                })
+                .catch(function(err) {
+                    console.log('client web: catch', err)
+                })
+    
+        </script>
+
+    </head>
+
+    <body>
+    </body>
+
+</html>
