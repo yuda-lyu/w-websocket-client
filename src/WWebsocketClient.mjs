@@ -81,7 +81,7 @@ function WWebsocketClient(opt) {
 
     //WebSocket, 網址傳token參數作為識別使用者
     try {
-        wsc = new MixWS(opt.url)
+        wsc = new MixWS(opt.url + '/' + opt.token)
     }
     catch (err) {
         return null
