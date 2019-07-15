@@ -1,5 +1,5 @@
-//import WSC from './src/WWebsocketClient.mjs'
-import WSC from './dist/w-websocket-client.umd.js'
+import WSC from './src/WWebsocketClient.mjs'
+//import WSC from './dist/w-websocket-client.umd.js'
 
 let opt = {
     url: 'ws://localhost:8080',
