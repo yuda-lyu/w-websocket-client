@@ -1,4 +1,6 @@
 import WS from 'ws'
+import getGlobal from 'wsemi/src/getGlobal.mjs'
+import getEnv from 'wsemi/src/getEnv.mjs'
 import isfun from 'wsemi/src/isfun.mjs'
 
 
@@ -64,15 +66,14 @@ function WWebsocketClient(opt) {
     }
 
 
-    //inBrowser
-    let inBrowser = typeof window !== 'undefined'
-    //console.log('inBrowser', inBrowser)
+    //isBrowser
+    let isBrowser = getEnv().isBrowser
 
 
     //MixWS
     let MixWS
-    if (inBrowser) {
-        MixWS = window.WebSocket //use browser websocket
+    if (isBrowser) {
+        MixWS = getGlobal().WebSocket //use browser websocket
     }
     else {
         MixWS = WS //use nodejs ws
@@ -89,7 +90,7 @@ function WWebsocketClient(opt) {
 
 
     //bind
-    if (inBrowser) {
+    if (isBrowser) {
         wsc.onopen = fOpen
         wsc.onmessage = function(ev) {
             let message = ev.data //瀏覽器端會被包至data

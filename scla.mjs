@@ -2,7 +2,7 @@ import WSC from './src/WWebsocketClient.mjs'
 //import WSC from './dist/w-websocket-client.umd.js'
 
 let opt = {
-    url: 'ws://localhost:8080',
+    url: 'ws://localhost:9000',
     token: '*',
     open: function() {
         console.log('client nodejs[port:8080]: open')
