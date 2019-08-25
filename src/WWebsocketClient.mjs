@@ -73,9 +73,11 @@ function WWebsocketClient(opt) {
     //MixWS
     let MixWS
     if (isBrowser) {
+        //於browser時, 不能直接使用window, 因可能會於worker內會沒有window可用, 故得通過getGlobal取得當前頂層物件
         MixWS = getGlobal().WebSocket //use browser websocket
     }
     else {
+        //若不是browser則假設為在nodejs, 故改使用ws連線
         MixWS = WS //use nodejs ws
     }
 
@@ -85,7 +87,16 @@ function WWebsocketClient(opt) {
         wsc = new MixWS(opt.url + '/' + '?token=' + opt.token)
     }
     catch (err) {
-        return null
+        //throw (new Error('can not new MixWS'))
+        wsc = null
+    }
+
+
+    //check, 可能因ie11安全性考量而被封鎖
+    if (wsc === null) {
+        return {
+            error: 'can not new MixWS'
+        }
     }
 
 
