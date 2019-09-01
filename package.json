@@ -1,6 +1,6 @@
 {
   "name": "w-websocket-client",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "A wrapper for websocket in nodejs and browser.",
   "main": "dist/w-websocket-client.umd.js",
   "dependencies": {
@@ -46,7 +46,7 @@
     "wsemi": "^1.2.25"
   },
   "scripts": {
-    "test": "mocha --require @babel/register",
+    "test": "./node_modules/.bin/mocha --require @babel/register",
     "deploy": "gh-pages -d docs"
   },
   "repository": {
