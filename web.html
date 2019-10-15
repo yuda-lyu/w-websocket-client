@@ -7,10 +7,15 @@
 
         <script nomodule src="https://cdn.jsdelivr.net/npm/@babel/polyfill/dist/polyfill.min.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/wsemi/dist/wsemi.umd.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         
         <script src="dist/w-websocket-client.umd.js"></script>
 
+        <script src="https://cdn.jsdelivr.net/npm/w-consolelog/dist/w-consolelog.umd.js"></script>
+        <script>
+            let logData=window['w-consolelog']
+        </script>
+        
         <script>
 
             //opt
@@ -18,20 +23,20 @@
                 url: 'ws://localhost:8080',
                 token: '*',
                 open: function() {
-                    wsemi.bodyLog('client web: open')
+                    logData('client web: open')
 
                     //send
                     wsc.send('abc')
                   
                 },
                 close: function() {
-                    wsemi.bodyLog('client web: close')
+                    logData('client web: close')
                 },
                 message: function(data) {
-                    wsemi.bodyLog('client web: message', data)
+                    logData('client web: message', data)
                 },
                 error: function(err) {
-                    wsemi.bodyLog('client web: error:', err)
+                    logData('client web: error:', err)
                 },
             }
 
