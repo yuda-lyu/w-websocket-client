@@ -13,7 +13,7 @@
 
         <script src="https://cdn.jsdelivr.net/npm/w-consolelog/dist/w-consolelog.umd.js"></script>
         <script>
-            let logData=window['w-consolelog']
+            console.log = window['w-consolelog']
         </script>
         
         <script>
@@ -23,20 +23,20 @@
                 url: 'ws://localhost:8080',
                 token: '*',
                 open: function() {
-                    logData('client web: open')
+                    console.log('client web: open')
 
                     //send
                     wsc.send('abc')
                   
                 },
                 close: function() {
-                    logData('client web: close')
+                    console.log('client web: close')
                 },
                 message: function(data) {
-                    logData('client web: message', data)
+                    console.log('client web: message', data)
                 },
                 error: function(err) {
-                    logData('client web: error:', err)
+                    console.log('client web: error:', err)
                 },
             }
 
