@@ -14,7 +14,7 @@ To view documentation or get support, visit [docs](https://yuda-lyu.github.io/w-
 
 ## Installation
 ### Using npm(ES6 module):
-> **Note:** `w-websocket-client` depends on `ws`
+> **Note:** `w-websocket-client` is mainly dependent on `ws`
 ```alias
 npm i w-websocket-client
 ```
@@ -57,7 +57,7 @@ let wsc = new WSC(opt)
 ```
 [Necessary] Add script for w-websocket-client.
 ```alias
-<script src="https://cdn.jsdelivr.net/npm/w-websocket-client@1.0.21/dist/w-websocket-client.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/w-websocket-client@1.0.22/dist/w-websocket-client.umd.js"></script>
 ```
 #### Example for `w-websocket-client`:
 > **Link:** [[dev source code](https://github.com/yuda-lyu/w-websocket-client/blob/master/web.html)]
