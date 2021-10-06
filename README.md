@@ -3,7 +3,6 @@ A wrapper for websocket in nodejs and browser.
 
 ![language](https://img.shields.io/badge/language-JavaScript-orange.svg) 
 [![npm version](http://img.shields.io/npm/v/w-websocket-client.svg?style=flat)](https://npmjs.org/package/w-websocket-client) 
-[![Build Status](https://travis-ci.org/yuda-lyu/w-websocket-client.svg?branch=master)](https://travis-ci.org/yuda-lyu/w-websocket-client) 
 [![license](https://img.shields.io/npm/l/w-websocket-client.svg?style=flat)](https://npmjs.org/package/w-websocket-client) 
 [![gzip file size](http://img.badgesize.io/yuda-lyu/w-websocket-client/master/dist/w-websocket-client.umd.js.svg?compression=gzip)](https://github.com/yuda-lyu/w-websocket-client)
 [![npm download](https://img.shields.io/npm/dt/w-websocket-client.svg)](https://npmjs.org/package/w-websocket-client) 
