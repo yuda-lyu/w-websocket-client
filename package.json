@@ -1,15 +1,15 @@
 {
   "name": "w-websocket-client",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "description": "A wrapper for websocket in nodejs and browser.",
   "main": "dist/w-websocket-client.umd.js",
   "dependencies": {
-    "ws": "^8.3.0",
+    "ws": "^8.5.0",
     "lodash": "^4.17.21",
-    "wsemi": "^1.6.34"
+    "wsemi": "^1.6.54"
   },
   "devDependencies": {
-    "w-package-tools": "^1.0.59"
+    "w-package-tools": "^1.0.65"
   },
   "scripts": {
     "test": "mocha --parallel --timeout 60000 --experimental-modules --es-module-specifier-resolution=node",
