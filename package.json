@@ -1,15 +1,14 @@
 {
   "name": "w-websocket-client",
-  "version": "1.0.24",
-  "description": "A wrapper for websocket in nodejs and browser.",
+  "version": "1.0.25",
   "main": "dist/w-websocket-client.umd.js",
   "dependencies": {
-    "ws": "^8.5.0",
+    "ws": "^8.12.0",
     "lodash": "^4.17.21",
-    "wsemi": "^1.6.54"
+    "wsemi": "^1.6.87"
   },
   "devDependencies": {
-    "w-package-tools": "^1.0.65"
+    "w-package-tools": "^1.0.66"
   },
   "scripts": {
     "test": "mocha --parallel --timeout 60000 --experimental-modules --es-module-specifier-resolution=node",
@@ -28,9 +27,5 @@
     "browser"
   ],
   "author": "yuda-lyu(semisphere)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/yuda-lyu/w-websocket-client/issues"
-  },
-  "homepage": "https://github.com/yuda-lyu/w-websocket-client#readme"
+  "license": "MIT"
 }
