@@ -6,6 +6,7 @@ A wrapper for websocket in nodejs and browser.
 [![license](https://img.shields.io/npm/l/w-websocket-client.svg?style=flat)](https://npmjs.org/package/w-websocket-client) 
 [![gzip file size](http://img.badgesize.io/yuda-lyu/w-websocket-client/master/dist/w-websocket-client.umd.js.svg?compression=gzip)](https://github.com/yuda-lyu/w-websocket-client)
 [![npm download](https://img.shields.io/npm/dt/w-websocket-client.svg)](https://npmjs.org/package/w-websocket-client) 
+[![npm download](https://img.shields.io/npm/dm/w-websocket-client.svg)](https://npmjs.org/package/w-websocket-client) 
 [![jsdelivr download](https://img.shields.io/jsdelivr/npm/hm/w-websocket-client.svg)](https://www.jsdelivr.com/package/npm/w-websocket-client)
 
 ## Documentation
@@ -56,7 +57,7 @@ let wsc = new WSC(opt)
 ```
 [Necessary] Add script for w-websocket-client.
 ```alias
-<script src="https://cdn.jsdelivr.net/npm/w-websocket-client@1.0.27/dist/w-websocket-client.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/w-websocket-client@1.0.28/dist/w-websocket-client.umd.js"></script>
 ```
 #### Example for `w-websocket-client`:
 > **Link:** [[dev source code](https://github.com/yuda-lyu/w-websocket-client/blob/master/web.html)]
