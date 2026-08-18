@@ -52,7 +52,7 @@ let wsc = new WSC(opt)
 
 Add script for w-websocket-client.
 ```alias
-<script src="https://cdn.jsdelivr.net/npm/w-websocket-client@1.0.36/dist/w-websocket-client.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/w-websocket-client@1.0.37/dist/w-websocket-client.umd.js"></script>
 ```
 
 #### Example for `w-websocket-client`:
