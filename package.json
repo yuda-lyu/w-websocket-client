@@ -1,10 +1,10 @@
 {
   "name": "w-websocket-client",
-  "version": "1.0.46",
+  "version": "1.0.47",
   "main": "dist/w-websocket-client.umd.js",
   "dependencies": {
     "ws": "^8.16.0",
-    "wsemi": "^1.9.1"
+    "wsemi": "^1.9.3"
   },
   "devDependencies": {
     "w-package-tools": "^1.1.16"
