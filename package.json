@@ -1,13 +1,13 @@
 {
   "name": "w-websocket-client",
-  "version": "1.0.82",
+  "version": "1.0.83",
   "main": "dist/w-websocket-client.umd.js",
   "dependencies": {
     "ws": "^8.23.0",
-    "wsemi": "^1.9.73"
+    "wsemi": "^1.9.74"
   },
   "devDependencies": {
-    "w-package-tools": "^1.1.29"
+    "w-package-tools": "^1.1.30"
   },
   "scripts": {
     "test": "mocha --parallel \"test/*.test.mjs\" --timeout 180000",
